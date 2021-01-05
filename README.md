@@ -16,6 +16,10 @@ node .
 3. Click on "Settings", and select the zone you wish to control from your computer.
 4. Success!
 
+## Troubleshooting
+the Roon API uses UDP multicast packets to discover Roon cores on the same subnetwork.  Some laptops (like my work one) block these packets, requiring you to connect directly to the host running the core.  Run ```node . --help``` to see the options that allow you to do this.
+
+You can also specify a log level (try `all`) that the API uses to report what is going on.  That might help
 
 # Credits
 I based this work off the following packages
