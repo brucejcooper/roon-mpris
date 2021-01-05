@@ -7,8 +7,11 @@
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": {
+    "name": "Bruce Cooper",
+    "email": "bruce@brucecooper.net"
+  },
+  "license": "apache-2.0",
   "dependencies": {
     "mpris-service": "^2.1.0",
     "node-roon-api": "github:roonlabs/node-roon-api",
