@@ -23,6 +23,8 @@ the Roon API uses UDP multicast packets to discover Roon cores on the same subne
 
 You can also specify a log level (try `all`) that the API uses to report what is going on.  That might help
 
+I had a couple of situations where I thought it was broken, but it turned out I just hadn't enabled and configured my plugin in roon.  Make sure you do that.
+
 # Credits
 I based this work off the following packages
 
