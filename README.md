@@ -4,12 +4,18 @@ This little script aims to provide a way to have MPRIS (i.e. your linux box) con
 
 # Installation
 
+1. Start running the mpris bridge
 ```
 git clone https://github.com/brucejcooper/roon-mpris.git
 cd roon-mpris
 npm install
 node .
 ```
+2. Go to `Roon` -> `Settings` -> `Extensions`.  You should see the "MPRIS adapter" under my name. Enable the Extension
+![Enable](enabling.png)
+3. Click on "Settings", and select the zone you wish to control from your computer.
+4. Success!
+
 
 # Credits
 I based this work off the following packages
