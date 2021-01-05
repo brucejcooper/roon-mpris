@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Roon extension to bind to the Ubuntu DBUS interface for media players.  Allows Media buttons to work.",
   "main": "index.js",
+  "bin": {
+    "roon-mpris": "./index.js"
+  },
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"

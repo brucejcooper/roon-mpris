@@ -1,10 +1,13 @@
+#!/usr/bin/env node
 "use strict";
 
 const RoonApi = require("node-roon-api");
 const RoonApiTransport = require("node-roon-api-transport");
 const RoonApiSettings  = require("node-roon-api-settings");
 const Player = require('mpris-service');
-const yargs = require('yargs')
+const yargs = require('yargs');
+const os = require('os');
+const fs = require('fs');
 
 
 const argv = yargs
@@ -62,6 +65,12 @@ function setSeek(seek) {
 }
 
 
+const homedir = os.homedir();
+const working_directory = `${homedir}/.config/roon-mpris`
+fs.mkdirSync(working_directory, { recursive: true });
+process.chdir( working_directory )
+
+
 const roon = new RoonApi({
     extension_id:        'com.8bitcloud.roon-mpris',
     display_name:        "MPRIS adapter",
@@ -89,7 +98,7 @@ const roon = new RoonApi({
             }
         } else if (data.zones_seek_changed) {
             for (var change of data.zones_seek_changed) {
-                if (change.zone_id === zone.zone_id) {
+                if (zone && change.zone_id === zone.zone_id) {
                     setSeek(change);
                 }
             }
