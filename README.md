@@ -1,4 +1,4 @@
-Want to control [Roon](https://roonlabs.com/) from your keyboard on linux?  You can run [Roon on Wine](https://github.com/RoPieee/roon-on-wine) which allows you to select albums to play or whatever, but this does not hook up to the standard media controller buttons used on Ubuntu, [MPRIS](https://www.freedesktop.org/wiki/Specifications/mpris-spec/).  
+Want to control [Roon](https://roonlabs.com/) from your keyboard on linux?  You can run [Roon on Wine](https://github.com/RoPieee/roon-on-wine) which allows you to select albums to play or whatever, but this does not hook up to the standard media controller buttons (PLAY, PAUSE, NEXT, PREV) used on Ubuntu, [MPRIS](https://www.freedesktop.org/wiki/Specifications/mpris-spec/).  
 
 This little script aims to provide a way to have MPRIS (i.e. your linux box) control Roon's basic functions, like Play, Pause, Next and Previous. That's all it does.
 
