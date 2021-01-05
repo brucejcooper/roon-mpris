@@ -1,0 +1,14 @@
+{
+    "roonstate": {
+        "tokens": {
+            "d287d548-0e35-4a06-811c-0d70cee4cbb1": "3ee2cc78-f191-4fd0-9fca-6fd8af269e9e"
+        },
+        "paired_core_id": "d287d548-0e35-4a06-811c-0d70cee4cbb1"
+    },
+    "settings": {
+        "zone": {
+            "output_id": "17014a9f6ce07e80645d63780f537d4a638f",
+            "name": "Bruce’s office"
+        }
+    }
+}
