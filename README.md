@@ -5,6 +5,10 @@ This little script aims to provide a way to have MPRIS (i.e. your linux box) con
 # Installation
 
 ```
+git clone https://github.com/brucejcooper/roon-mpris.git
+cd roon-mpris
+npm install
+node .
 ```
 
 # Credits
