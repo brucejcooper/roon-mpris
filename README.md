@@ -19,7 +19,7 @@ This little script aims to provide a way to have MPRIS (i.e. your linux box) con
 1. Use your keyboard to control playback.  Supported keys are PLAY/PAUSE, STOP (which appears to just pause), NEXT and PREV
 
 ## Troubleshooting
-the Roon API uses UDP multicast packets to discover Roon cores on the same subnetwork.  Some laptops (like my work one) block these packets, requiring you to connect directly to the host running the core.  Run ```node . --help``` to see the options that allow you to do this.
+the Roon API uses UDP multicast packets to discover Roon cores on the same subnetwork.  Some laptops (like my work one) block these packets, requiring you to connect directly to the host running the core.  Run ```roon-mpris --help``` to see the options that allow you to do this.
 
 You can also specify a log level (try `all`) that the API uses to report what is going on.  That might help
 
