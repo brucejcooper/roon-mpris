@@ -5,19 +5,18 @@ This little script aims to provide a way to have MPRIS (i.e. your linux box) con
 # Installation
 
 1. Install this software
-```
-git clone https://github.com/brucejcooper/roon-mpris.git
-cd roon-mpris
-npm install
-```
-2. run the script
-```
-node .
-```
-3. Go to `Roon` -> `Settings` -> `Extensions`.  You should see the "MPRIS adapter" under my name. Enable the Extension
+    ```
+    npm install -g github:brucejcooper/roon-mpris
+    ```
+1. run the script from any directory
+    ```
+    node-mpris
+    ```
+    Note that this will create a configuration file in `${HOME}/.config/roon-mpris`.
+1. Go to `Roon` -> `Settings` -> `Extensions`.  You should see the "MPRIS adapter" under my name. Enable the Extension
 ![Enable](enabling.png)
-4. Click on "Settings", and select the zone you wish to control from your computer.
-5. Success!
+1. Click on "Settings", and select the zone you wish to control from your computer.
+1. Success!
 
 ## Troubleshooting
 the Roon API uses UDP multicast packets to discover Roon cores on the same subnetwork.  Some laptops (like my work one) block these packets, requiring you to connect directly to the host running the core.  Run ```node . --help``` to see the options that allow you to do this.
