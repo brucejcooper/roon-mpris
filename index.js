@@ -11,10 +11,16 @@ const fs = require('fs');
 
 
 const argv = yargs
-    .option('core', {
-        alias: 'c',
+    .option('host', {
+        alias: 'h',
         description: 'Hostname to connect to, rather than using Roon discovery',
         type: 'string'
+    })
+    .option('config', {
+        alias: 'c',
+        description: "Where the app's configuration will be stored.  This directory will be created if it does not exist",
+        type: 'string',
+        default: `${os.homedir()}/.config/roon-mpris`
     })
     .option('port', {
         alias: 'p',
@@ -29,7 +35,6 @@ const argv = yargs
         default: 'none'
     })
     .help()
-    .alias('help', 'h')
     .argv;
 
 var core;
@@ -65,8 +70,7 @@ function setSeek(seek) {
 }
 
 
-const homedir = os.homedir();
-const working_directory = `${homedir}/.config/roon-mpris`
+const working_directory = `${os.homedir()}/.config/roon-mpris`
 fs.mkdirSync(working_directory, { recursive: true });
 process.chdir( working_directory )
 
