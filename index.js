@@ -16,17 +16,17 @@ const argv = yargs
         description: 'Hostname to connect to, rather than using Roon discovery',
         type: 'string'
     })
-    .option('config', {
-        alias: 'c',
-        description: "Where the app's configuration will be stored.  This directory will be created if it does not exist",
-        type: 'string',
-        default: `${os.homedir()}/.config/roon-mpris`
-    })
     .option('port', {
         alias: 'p',
         description: 'The port to connect to when connecting directly to a host',
         type: 'number',
         default: 9100
+    })
+    .option('config', {
+        alias: 'c',
+        description: "Where the app's configuration will be stored.  This directory will be created if it does not exist",
+        type: 'string',
+        default: `${os.homedir()}/.config/roon-mpris`
     })
     .option('log', {
         alias: 'l',
