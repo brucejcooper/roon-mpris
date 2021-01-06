@@ -175,9 +175,9 @@ roon.init_services({
   
 
 // My Work laptop blocks UDP by default, so we use the direct connect method
-if (argv.core) {
-    console.log(`Connecting to Core at ws://${argv.core}:${argv.port}`)
-    roon.ws_connect({ host: argv.core, port: argv.port});
+if (argv.host) {
+    console.log(`Connecting to Core at ws://${argv.host}:${argv.port}`)
+    roon.ws_connect({ host: argv.host, port: argv.port});
 } else {
     console.log("Autodiscovery of Core")
     roon.start_discovery();
