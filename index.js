@@ -45,9 +45,11 @@ function zoneChanged(new_zone) {
     var url = core.moo.transport.ws._url.substring(5);
     var now_playing = zone.now_playing;
 
+    console.log(zone);
+
     if (now_playing) {
         mpris.metadata = {
-            'mpris:length': now_playing.length * 1000 * 1000, // In microseconds
+            'mpris:length': now_playing.length ? now_playing.length * 1000 * 1000 : 0, // In microseconds
             'mpris:artUrl': `http://${url}/image/${now_playing.image_key}`,
             'xesam:title': now_playing.three_line.line1,
             'xesam:album': now_playing.three_line.line3,
@@ -60,7 +62,6 @@ function zoneChanged(new_zone) {
     // mpris.canPlay = zone.is_play_allowed; // the ubuntu dock widget disappears if this is set to false (while playing)
     mpris.canPause = zone.is_pause_allowed;
     mpris.canSeek = zone.is_seek_allowed;
-    console.log(zone);
 }
 
 function setSeek(seek) {
