@@ -10,7 +10,7 @@ This little script aims to provide a way to have MPRIS (i.e. your linux box) con
     ```
 1. run the script from any directory
     ```
-    node-mpris
+    roon-mpris
     ```
     Note that this will create a configuration file in `${HOME}/.config/roon-mpris`.
 1. In your existing Roon application (phone or desktop) Go to `Roon` -> `Settings` -> `Extensions`.  You should see the "MPRIS adapter" under my name. Enable the Extension
